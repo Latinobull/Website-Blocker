@@ -11,7 +11,7 @@ while True:
     if (
         dt(dt.now().year, dt.now().month, dt.now().day, 8)
         < dt.now()
-        < dt(dt.now().year, dt.now().month, dt.now().day, 8)
+        < dt(dt.now().year, dt.now().month, dt.now().day, 16)
     ):
         print("Working Hours")
         with open(host_temp, "r+") as file:
@@ -23,4 +23,6 @@ while True:
                     file.write(redirect + " " + website + "\n")
     else:
         print("Party Hours!!")
+        with open(host_temp, "r+") as file:
+            content = file.readlines()
     time.sleep(5)
