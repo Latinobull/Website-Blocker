@@ -14,7 +14,7 @@ while True:
         < dt(dt.now().year, dt.now().month, dt.now().day, 16)
     ):
         print("Working Hours")
-        with open(host_temp, "r+") as file:
+        with open(hosts_path_Windows, "r+") as file:
             content = file.read()
             for website in website_list:
                 if website in content:
@@ -23,7 +23,7 @@ while True:
                     file.write(redirect + " " + website + "\n")
     else:
         print("Party Hours!!")
-        with open(host_temp, "r+") as file:
+        with open(hosts_path_Windows, "r+") as file:
             content = file.readlines()
             file.seek(0)
             for line in content:
